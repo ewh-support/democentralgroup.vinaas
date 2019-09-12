@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd/FuturaStd-LightOblique.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd/FuturaStd-Light.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../fonts/FuturaStd/FuturaStd-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd/FuturaStd-BoldCondensed.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../fonts/FuturaStd/FuturaStd-BookOblique.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-BookOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('../fonts/FuturaStd/FuturaStd-ExtraBold.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../fonts/FuturaStd/FuturaStd-BoldOblique.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura Std Book';
+    src: url('../fonts/FuturaStd/FuturaStd-Book.woff2') format('woff2'),
+        url('../fonts/FuturaStd/FuturaStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font: {
+        size: 1.6rem;
+        family: 'Futura Std Book';
+        weight: normal;
+    }
+    margin-bottom: 20rem; // Demo
+}
+.container {
+    @include for-size(1200) {
+        max-width: 1170px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,table,tr,td,figure,figcaption, label {
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1;
+    font-size: inherit;
+    font-weight: inherit;
+}
+a {
+    text-decoration: none;
+    @include transition(all .3s ease);
+    &:hover {
+        text-decoration: none;
+    }
+}
+button {
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+}
+ul {
+    list-style: none;
+}

@@ -1,0 +1,58 @@
+.banner {
+    position: relative;
+    text-align: center;
+    & &__image {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 100vh;
+        }
+        img {
+            @include absolute-image;
+        }
+    }
+    & &__text {
+        color: $color-01;
+        padding: 3.2rem 5.6rem;
+        border: 2px solid $color-03;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        &:before {
+            content: '';
+            @include absolute-all;
+            background-color: rgba($color-02, .4);
+            z-index: -1;
+            @include transform(translate(-1rem, -1rem));
+        }
+    }
+    &__text &__title {
+        font: {
+            size: 5.2rem;
+            family: 'Futura Std';
+            weight: 800;
+        }
+        text-transform: uppercase;
+    }
+    &__text &__description {
+        font-size: 2.4rem;
+        line-height: 1;
+        margin-top: 1.2rem;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    & &__image {
+        display: inline-block;
+        img {
+            max-width: 27rem;
+            height: auto;
+        }
+    }
+}

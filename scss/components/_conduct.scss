@@ -1,0 +1,61 @@
+.conduct {
+    &__intro {
+        font: {
+            size: 1.8rem;
+            family: 'Futura Std';
+            weight: bold;
+        }
+        text-transform: uppercase;
+        color: $color-01;
+    }
+    &__item {
+        padding: 0 1.5rem;
+    }
+    &__item &__image {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 63.93%;
+        }
+        img {
+            @include absolute-image;
+            border-radius: 7px;
+        }
+    }
+    &__item &__title {
+        font: {
+            size: 1.8rem;
+            family: 'Futura Std';
+            weight: bold;
+        }
+        text-transform: uppercase;
+        color: $color-05;
+    }
+    &__slider {
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            cursor: pointer;
+            .icon {
+                font-size: 4rem;
+                color: $color-06;
+            }
+            &.prev {
+                left: -3rem;
+            }
+            &.next {
+                right: -3rem;
+            }
+        }
+    }
+
+    &__comp {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include transform(translateY(50%));
+    }
+}
