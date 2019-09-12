@@ -1,0 +1,38 @@
+.faq {
+    &__session {
+        padding: 20rem 0 10rem 0;
+        span.title {
+            border-radius: 25px;
+            color: $color-06;
+            padding: 1rem 6rem;
+            border: 1px solid $color-06;
+            font-family: "Futura Std Book";
+            font-size: 18px;
+        }   
+    }
+    &__title {
+        font-family: "Futura Std Bold";
+        text-transform: uppercase;
+        font-size: 3.6rem;
+        padding: 2rem 0;
+    }
+    &__item {
+        padding: 2rem 12rem 2rem 4rem;
+        border: 2px solid $color-07;
+        border-radius: 25px;
+        margin: 1rem 0;
+        &::after {
+            content: url(../img/faq/arrow.png);
+            display: block;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: 4rem;
+
+        }
+        p {
+            font-family: "Futura Std Book";
+            font-size: 1.6rem;
+        }
+    }
+}
