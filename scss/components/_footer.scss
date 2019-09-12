@@ -1,0 +1,12 @@
+footer {
+    background: $color-08;
+    border-top: 2px solid $color-07;
+    .footer {
+        &__item {
+            padding: 2rem 0;
+            img {
+                padding: 0 0.5rem;
+            }
+        }
+    }
+}
