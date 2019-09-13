@@ -1,0 +1,24 @@
+footer {
+    background: $color-08;
+    border-top: 2px solid $color-07;
+    .footer {
+        &__item {
+            padding: 2rem 0;
+            img {
+                padding: 0 0.5rem;
+            }
+        }
+    }
+}
+
+
+#back-to-top {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    @include transition(all .3s ease);
+}
+#back-to-top.hidden {
+    opacity: 0;
+    pointer-events: none
+}

@@ -31,8 +31,7 @@
     &__text &__title {
         font: {
             size: 5.2rem;
-            family: 'Futura Std';
-            weight: 800;
+            family: 'Futura Std ExtraBold';
         }
         text-transform: uppercase;
     }
@@ -40,6 +39,7 @@
         font-size: 2.4rem;
         line-height: 1;
         margin-top: 1.2rem;
+        font-family: 'Futura Std Book';
     }
 }
 
