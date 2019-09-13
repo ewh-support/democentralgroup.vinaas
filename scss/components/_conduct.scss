@@ -12,23 +12,38 @@
     }
     &__item &__image {
         position: relative;
+        overflow: hidden;
         &:before {
             content: '';
             display: block;
             padding-top: 63.93%;
         }
+        .link {
+            @include absolute-all;
+        }
         img {
             @include absolute-image;
             border-radius: 7px;
+            @include transform(scale(1));
+            @include transition(all .3s ease);
+        }
+        &:hover {
+            img {
+                @include transform(scale(1.1));
+            }
         }
     }
-    &__item &__title {
+    &__item &__link {
         font: {
             size: 1.8rem;
             family: 'Futura Std Bold';
         }
         text-transform: uppercase;
         color: $color-05;
+        @include transition(all .3s ease);
+        &:hover {
+            color: $color-06;
+        }
     }
     &__slider {
         .slick-arrow {

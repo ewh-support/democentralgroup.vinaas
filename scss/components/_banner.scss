@@ -11,6 +11,13 @@
         img {
             @include absolute-image;
         }
+        .demo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            max-width: 7rem;
+            height: auto;
+        }
     }
     & &__text {
         color: $color-01;

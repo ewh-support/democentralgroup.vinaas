@@ -29,5 +29,10 @@
         color: $color-01;
         border-radius: 25px;
         margin-bottom: 8rem;
+        @include transition(all .3s ease);
+        &:hover {
+            color: $color-01;
+            background-color: $color-05;
+        }
     }
 }
