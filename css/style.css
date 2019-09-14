@@ -617,6 +617,7 @@ body.wrap-nav-sidebar .wrapper {
 
     .carousel-caption a:hover {
       color: #f52430;
+      text-decoration: none;
     }
 .carousel-caption.style3 {
   bottom: 0;
