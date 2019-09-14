@@ -10,3 +10,15 @@ footer {
         }
     }
 }
+
+
+#back-to-top {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    @include transition(all .3s ease);
+}
+#back-to-top.hidden {
+    opacity: 0;
+    pointer-events: none
+}
