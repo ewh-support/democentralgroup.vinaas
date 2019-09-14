@@ -96,6 +96,8 @@ jQuery(function ($) {
                 });
             });
 
+            $('.banner__slider').slickAnimation();
+
             if($("#back-to-top").length) {
                 const valHeight = $(window).height();
                 
