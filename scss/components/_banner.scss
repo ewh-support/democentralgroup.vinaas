@@ -90,6 +90,9 @@
                 background-color: rgba($color-02, .5);
             }
         }
+        @include for-size(575) {
+            padding: 3.2rem 3.6rem;
+        }
     }
     &__text &__title {
         font: {
