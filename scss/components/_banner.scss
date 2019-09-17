@@ -148,3 +148,18 @@
         }
     }
 }
+
+.location{
+    img {
+        @include for-size(991) {
+            max-width: 65%;
+        }
+        @include for-size(767) {
+            max-width: 50%;
+        }
+        
+    }
+    @include for-size(575) {
+        display: none !important;
+    }
+}

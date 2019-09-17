@@ -15,7 +15,7 @@ jQuery(function ($) {
                 dots: false,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 4000,
+                autoplaySpeed: 10000,
                 prevArrow: `<div class='prev'><i class='icon fas fa-chevron-left'></i></div>`,
                 nextArrow: `<div class='next'><i class='icon fas fa-chevron-right'></i></div>`,
             });
