@@ -630,8 +630,8 @@ body.wrap-nav-sidebar .wrapper {
 .carousel-inner .item a img {
   display: block;
   height: auto;
-  max-width: 100%;
-  width: 100%; }
+  max-width: 75%;
+  width: 75%; }
 .carousel-inner .item img {
   display: block;
   height: auto;
