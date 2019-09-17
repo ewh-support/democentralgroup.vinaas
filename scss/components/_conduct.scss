@@ -1,3 +1,10 @@
+%reset {
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
 .conduct {
     &__intro {
         font: {
@@ -6,6 +13,9 @@
         }
         text-transform: uppercase;
         color: $color-01;
+        @include for-size(767) {
+            color: $color-06;
+        }
     }
     &__item {
         padding: 0 1.5rem;
@@ -17,6 +27,9 @@
             content: '';
             display: block;
             padding-top: 63.93%;
+            @include for-size(575) {
+                padding-top: 50%;
+            }
         }
         .link {
             @include absolute-all;
@@ -41,11 +54,17 @@
         text-transform: uppercase;
         color: $color-05;
         @include transition(all .3s ease);
+        @include for-size(767) {
+            font-size: 1.6rem;
+        }
         &:hover {
             color: $color-06;
         }
     }
     &__slider {
+        &.slick-dotted.slick-slider {
+            margin-bottom: 0;
+        }
         .slick-arrow {
             position: absolute;
             top: 50%;
@@ -62,6 +81,44 @@
                 right: -3rem;
             }
         }
+        .slick-dots {
+            font-size: 0;
+            bottom: -3.5rem;
+            line-height: 1;
+            li {
+                @extend %reset;
+                + li {
+                    margin-left: 1rem;
+                }
+                button {
+                    @extend %reset;
+                    &:before {
+                        content: '';
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        display: inline-block;
+                        border-radius: 50%;
+                        background-color: $color-03;
+                        opacity: 1;
+                        position: relative;
+                        @include transition(all .3s ease);
+                    }
+                    &:hover {
+                        &:before {
+                            background-color: $color-06;
+                        }
+                    }
+                }
+                &.slick-active {
+                    button {
+                        &:before {
+                            background-color: $color-06;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__comp {
@@ -70,5 +127,63 @@
         right: 0;
         bottom: 0;
         @include transform(translateY(50%));
+        @include for-size(1440) {
+            @include transform(translateY(0));
+        }
+        @include for-size(767) {
+            @include transform(translateY(0));
+            position: relative;
+            left: auto;
+            right: auto;
+            bottom: auto;
+        }
+
     }
 }
+
+
+
+
+// .slick-dotted.slick-slider {
+// 	margin-bottom: 0;
+// 	position: relative;
+// 	z-index: 10;
+// }
+// .slick-dots {
+// 	font-size: 0;
+// 	bottom: -3.3rem;
+// 	line-height: 1;
+// 	li {
+// 		@extend %reset;
+// 		+ li {
+// 			margin-left: .7rem;
+// 		}
+// 		button {
+// 			@extend %reset;
+// 			&:before {
+// 				content: '';
+// 				width: .9rem;
+// 				height: .9rem;
+// 				display: inline-block;
+// 				border-radius: 50%;
+// 				background-color: $color-08;
+// 				opacity: 1;
+// 				position: relative;
+// 				@include transition(all .3s ease);
+// 			}
+// 			&:hover {
+// 				&:before {
+// 					background-color: $color-03;
+// 				}
+// 			}
+// 		}
+// 		&.slick-active {
+// 			button {
+// 				&:before {
+// 					background-color: $color-03;
+// 					opacity: 1;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

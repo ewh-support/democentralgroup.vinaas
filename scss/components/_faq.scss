@@ -1,13 +1,25 @@
 .faq {
     &__session {
-        padding: 20rem 0 10rem 0;
-        span.title {
+        padding: 25rem 0 10rem 0;
+        @include for-size(767) {
+            padding: 10rem 0 8rem 0;
+        }
+        .title {
             border-radius: 25px;
-            color: $color-06;
+            color: $color-01;
             padding: 1rem 6rem;
             border: 1px solid $color-06;
             font-family: "Futura Std Book";
-            font-size: 18px;
+            font-size: 1.8rem;
+            background-color: $color-06;
+            @include transition(all .3s ease);
+            @include for-size(575) {
+                font-size: 1.6rem;
+            }
+            &:hover {
+                background-color: $color-05;
+                border-color: $color-05;
+            }
         }   
     }
     &__title {
@@ -15,14 +27,26 @@
         text-transform: uppercase;
         font-size: 3.6rem;
         padding: 2rem 0;
+        @include for-size(991) {
+            font-size: 3.2rem;
+        }
+        @include for-size(767) {
+            font-size: 2.6rem;
+        }
+        @include for-size(575) {
+            font-size: 2.2rem;
+        }
     }
     &__item {
-        padding: 2rem 12rem 2rem 4rem;
+        padding: 2rem 8rem 2rem 2rem;
         border: 2px solid $color-07;
         border-radius: 25px;
         margin: 1rem 0;
         position: relative;
         @include transition(all .3s ease);
+        @include for-size(575) {
+            padding: 2rem 8rem 2rem 2rem;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -41,7 +65,7 @@
             position: absolute;
             top: 50%;
             @include transform(translateY(-50%));
-            right: 4rem;
+            right: 2rem;
 
         }
         &:hover {
@@ -55,6 +79,9 @@
         p {
             font-family: "Futura Std Book";
             font-size: 1.6rem;
+            @include for-size(575) {
+                font-size: 1.4rem;
+            }
         }
     }
 }

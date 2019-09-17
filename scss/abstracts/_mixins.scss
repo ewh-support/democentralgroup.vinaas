@@ -28,31 +28,34 @@
     @if $breakpoint == 1920 {
         @media (min-width: 1920px) { @content; }
     }
-    @if $breakpoint == 1200 {
+    @else if $breakpoint == 1440 {
+        @media (min-width: 1440px) { @content; }
+    }
+    @else if $breakpoint == 1200 {
         @media (min-width: 1200px) { @content; }
     }
-    @if $breakpoint == 1199 {
+    @else if $breakpoint == 1199 {
         @media (max-width: 1199px) { @content; }
     }
-    @if $breakpoint == 992 {
+    @else if $breakpoint == 992 {
         @media (min-width: 992px) { @content; }
     }
-    @if $breakpoint == 991 {
+    @else if $breakpoint == 991 {
         @media (max-width: 991px) { @content; }
     }
-    @if $breakpoint == 768 {
+    @else if $breakpoint == 768 {
         @media (min-width: 768px) { @content; }
     }
-    @if $breakpoint == 767 {
+    @else if $breakpoint == 767 {
         @media (max-width: 767px) { @content; }
     }
-    @if $breakpoint == 576 {
+    @else if $breakpoint == 576 {
         @media (min-width: 576px) { @content; }
     }
-    @if $breakpoint == 575 {
+    @else if $breakpoint == 575 {
         @media (max-width: 575px) { @content; }
     }
-    @if $breakpoint == 375 {
+    @else if $breakpoint == 375 {
         @media (max-width: 375px) { @content; }
     }
 }
