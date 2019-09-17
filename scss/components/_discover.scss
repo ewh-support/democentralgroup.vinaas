@@ -19,6 +19,15 @@
         text-transform: uppercase;
         font-size: 3.6rem;
         padding: 8rem 0 3rem 0;
+        @include for-size(991) {
+            font-size: 3.2rem;
+        }
+        @include for-size(767) {
+            font-size: 2.6rem;
+        }
+        @include for-size(575) {
+            font-size: 2.2rem;
+        }
     }
     &__button {
         font-family: "Futura Std Bold";
@@ -30,6 +39,9 @@
         border-radius: 25px;
         margin-bottom: 8rem;
         @include transition(all .3s ease);
+        @include for-size(575) {
+            font-size: 1.6rem;
+        }
         &:hover {
             color: $color-01;
             background-color: $color-05;

@@ -8,16 +8,65 @@
             display: block;
             padding-top: 100vh;
         }
-        img {
+        > img {
             @include absolute-image;
         }
-        .demo {
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            max-width: 7rem;
-            height: auto;
+    }
+    .location {
+        position: absolute;
+        display: inline-block;
+        &.l-01 {
+            bottom: 22%;
+            left: 55%;
         }
+        &.l-02 {
+            bottom: 23%;
+            left: 70%;
+        }
+        &.l-03 {
+            bottom: 16%;
+            left: 82%;
+        }
+        &.l-04 {
+            bottom: 35%;
+            left: 86%;
+        }
+        &.l-05 {
+            bottom: 40%;
+            left: 2%;
+        }
+        &.l-06 {
+            bottom: 28%;
+            left: 24%;
+        }
+        &.l-07 {
+            bottom: 38%;
+            left: 38%;
+        }
+        &.l-08 {
+            bottom: 25%;
+            left: 63%;
+        }
+        &.l-09 {
+            bottom: 38%;
+            left: 88%;
+        }
+        &.l-10 {
+            bottom: 38%;
+            left: 10%;
+        }
+        &.l-11 {
+            bottom: 18%;
+            left: 22%;
+        }
+        &.l-12 {
+            bottom: 23%;
+            left: 52%;
+        }
+        &.l-13 {
+            bottom: 47%;
+            left: 81%;
+        } 
     }
     & &__text {
         color: $color-01;
@@ -33,6 +82,13 @@
             background-color: rgba($color-02, .4);
             z-index: -1;
             @include transform(translate(-1rem, -1rem));
+            @include transition(all .3s ease);
+        }
+        &:hover {
+            &:before {
+                @include transform(translate(0, 0));
+                background-color: rgba($color-02, .5);
+            }
         }
     }
     &__text &__title {
@@ -41,12 +97,31 @@
             family: 'Futura Std ExtraBold';
         }
         text-transform: uppercase;
+        white-space: nowrap;
+        @include for-size(1199) {
+            font-size: 4.2rem;
+        }
+        @include for-size(767) {
+            font-size: 3.2rem;
+        }
+        @include for-size(575) {
+            font-size: 2.5rem;
+        }
     }
     &__text &__description {
         font-size: 2.4rem;
         line-height: 1;
         margin-top: 1.2rem;
         font-family: 'Futura Std Book';
+        @include for-size(1199) {
+            font-size: 2.2rem;
+        }
+        @include for-size(767) {
+            font-size: 1.8rem;
+        }
+        @include for-size(575) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -60,6 +135,9 @@
         img {
             max-width: 27rem;
             height: auto;
+            @include for-size(1199) {
+                max-width: 20rem;
+            }
         }
     }
 }

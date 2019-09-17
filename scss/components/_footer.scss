@@ -4,6 +4,9 @@ footer {
     .footer {
         &__item {
             padding: 2rem 0;
+            @include for-size(575) {
+                font-size: 1.4rem;
+            }
             img {
                 padding: 0 0.5rem;
             }
